@@ -54,18 +54,18 @@ let server = api(8080)
 server:get("/", fn(headers, body)
   return [200,
           "Hello World!"]
-end
+end)
 
 server:get("/time", fn(headers, body)
   return [200,
           "The time is " + time:now():toString()]
-end
+end)
 
 server:get("/data", fn(headers, body)
   return [200,
           json:dump({ "foo" | 1,
-                      "bar" | 2})
-end
+                      "bar" | 2})]
+end)
                 </code>
             </pre>
         </div>
