@@ -28,6 +28,9 @@
                 <a href="https://forum.oasis-lang.com">Community</a>
             </li>
             <li>
+                <a href="https://github.com/oasis-lang">Source Code</a>
+            </li>
+            <li>
                 <a href="/test">Download</a>
             </li>
         </ul>
@@ -60,9 +63,8 @@ end
 
 server:get("/data", fn(headers, body)
   return [200,
-          json:dump(map():
-            set("foo", 1):
-            set("bar", 2))
+          json:dump({ "foo" | 1,
+                      "bar" | 2})
 end
                 </code>
             </pre>
