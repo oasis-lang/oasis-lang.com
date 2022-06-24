@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oasis Programming Language</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon"
+          href="oasis.png">
+</head>
+<body>
+    <div class="navbar">
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2"><img src="oasis.png" class="logo"></th>
+                <th style="padding-left: 6.5%; text-align: left; transform: translateY(10%);"><h1>Oasis</h1></th>
+            </tr>
+            <tr>
+                <th style="transform: translateY(-100%); white-space: nowrap"><h2 style="padding-left: 50%">Dead simple.</h2></th>
+            </tr>
+            </tbody>
+        </table>
+        <ul class="nav">
+            <li>
+                <a href="/test">Home</a>
+            </li>
+            <li>
+                <a href="/test">Documentation</a>
+            </li>
+            <li>
+                <a href="/test">Community</a>
+            </li>
+            <li>
+                <a href="/test">Download</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contentContainer">
+        <div class="contentAreaLeft">
+            <h1>Tiny but mighty.</h1>
+            <p>
+                Oasis is a programming language built to be used for scripting and small applications.
+                Inspired by Ruby, Lua, and Smalltalk - Oasis is prototype-based and dynamically typed.
+                <br><br>
+                To jump in, hit the Download Oasis button.
+            </p>
+            <button class="downloadButton"><b>Download Oasis</b></button>
+        </div>
+        <div class="contentAreaRight">
+            <pre>
+                <code>
+let server = api(8080)
+
+server:get("/", fn(headers, body)
+  return [200,
+          "Hello World!"]
+end
+
+server:get("/time", fn(headers, body)
+  return [200,
+          "The time is " + time:now():toString()]
+end
+
+server:get("/data", fn(headers, body)
+  return [200,
+          json:dump(map():
+            set("foo", 1):
+            set("bar", 2))
+end
+                </code>
+            </pre>
+        </div>
+    </div>
+    <footer>
+        <p><b>Copyright 2022 Oasis Developers - Licensed under the <a href="/LICENSE">MIT License</a>.</b></p>
+    </footer>
+</body>
+
+</html>
